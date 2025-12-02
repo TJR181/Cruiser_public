@@ -1,0 +1,33 @@
+[project]
+name = "cruiser"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+	"langchain>=0.2.13",
+	"langchain-core>=0.2.33",
+	"langchain-community>=0.2.12",
+	"langchain-openai>=0.1.7",
+	"langchain-ollama>=0.1.1",
+	"pydantic>=2.7.0",
+	"typing-extensions>=4.9.0",
+	"requests>=2.31.0",
+	"setuptools>=80.9.0",
+	"sqlmap>=1.9.11",
+	"fenjing>=0.8.1",
+	"dirsearch>=0.4.3.post1",
+]
+
+[tool.pytest.ini_options]
+addopts = "-q"
+python_files = ["test_*.py", "*_test.py"]
+
+[project.optional-dependencies]
+dev = [
+	"pytest>=8.2.0",
+]
+
+[[tool.uv.index]]
+url = "https://mirrors.tuna.tsinghua.edu.cn/pypi/web/simple"
+default = true
